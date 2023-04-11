@@ -21,7 +21,7 @@ const Navbar = () => {
     <div>
 
       <nav className="" >
-        <div className="shadow-gray-500 shadow-md  bg-color-first  flex justify-between  md:h-14 h-10 md:px-12 px-2 md:py-10 py-6 items-center fixed w-full bg-green-600  z-30">
+        <div className="shadow-gray-500 shadow-md  bg-color-first  flex justify-between  md:h-14 h-10 md:px-12 px-2 md:py-10 py-6 items-center fixed w-full bg-blue-600  z-30">
           <Link to='/'>  <div className="text-white md:text-3xl text-2xl italic">
             <p className="font-bold">Travel Agency Bangladesh</p>
           </div></Link>
@@ -57,7 +57,7 @@ const Navbar = () => {
           <div onClick={() => {
             setDropdown(true)
             setToogleCross(false)
-          }} className={dropdown ? 'rounded-b  bg-green-600 md:hidden fixed  top-12 w-64   z-30 -left-64 transition-all duration-700' : 'md:hidden fixed , top-12 w-64 left-0 transition-all duration-700 rounded-b bg-green-600'} >
+          }} className={dropdown ? 'rounded-b  bg-blue-600 md:hidden fixed  top-12 w-64   z-30 -left-64 transition-all duration-700' : 'md:hidden fixed , top-12 w-64 left-0 transition-all duration-700 rounded-b bg-blue-600'} >
 
             <Link to='/'>  <p className=" border-2 border-white  px-2 py-2 mx-2 bg-white rounded my-3 ">Home</p></Link>
 
