@@ -103,11 +103,11 @@ const Contact = () => {
 
             <div className="w-full mx-4 mt-16">
               <div className='flex'>
-                <svg width='16px'  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 256c-35.3 0-64-28.7-64-64s28.7-64 64-64s64 28.7 64 64s-28.7 64-64 64z" /></svg> <p className='ml-6'>Chetona IT Park</p>
+                <svg width='16px'  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 256c-35.3 0-64-28.7-64-64s28.7-64 64-64s64 28.7 64 64s-28.7 64-64 64z" /></svg> <p className='ml-6'>xxxxxxxxxxxxxxxx</p>
               </div>
 
               <div className='flex '>
-                <svg width='16px'  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z" /></svg> <p className='ml-6'> Chetona IT Park@gmail.com </p>
+                <svg width='16px'  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z" /></svg> <p className='ml-6'> xxxxxxxxx@gmail.com </p>
               </div>
               {/* <div className='w-full h-[2px] bg-white my-10'></div> */}
 
@@ -125,7 +125,7 @@ const Contact = () => {
               </div>
 
               {/* <div className='w-full h-[2px] bg-white mt-10'></div> */}
-              <h1 className='text-center mt-2'>© Chetona IT Park | Software Development Company</h1>
+              <h1 className='text-center mt-2'>©xxxxxxxxxxx|xxxxxxxxxx</h1>
             </div>
           </div>
         </div>
