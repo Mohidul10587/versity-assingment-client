@@ -28,7 +28,7 @@ const Footer = () => {
         </div>
       </div>
     </div>
-    <div className="bg-green-700 text-white text-center py-3 border-t"><p>© Copyright By<span> Chetona Corporation </span>
+    <div className="bg-green-700 text-white text-center py-3 border-t"><p>© Copyright By<span> Layek Md Sony</span>
     </p>
     </div>
   </div>
