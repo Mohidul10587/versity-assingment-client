@@ -2,6 +2,7 @@
 "use client"; // this is a client component
 // import { signOut } from "firebase/auth";
 import { useState } from "react";
+import React, { useRef } from 'react';
 // import { useAuthState } from "react-firebase-hooks/auth";
 import { RxCross2 } from 'react-icons/rx'
 import { VscThreeBars } from 'react-icons/vsc'
@@ -13,6 +14,7 @@ import { Link, useNavigate } from "react-router-dom";
 const Navbar = () => {
   const [dropdown, setDropdown] = useState(true)
   const [toggleCross, setToogleCross] = useState(false)
+
 
 
 
@@ -29,14 +31,18 @@ const Navbar = () => {
           {/* menu for md device */}
           <div className="md:flex hidden" >
 
-          <a href="#Home"> <p className="mx-5 text-white hover:text-gray-50 duration-700 border-2   border-white-white rounded-md px-3 w-28 text-center">Home</p></a>
+            <a href="#Home"> <p className="mx-5 text-white hover:text-gray-50 duration-700 border-2   border-white-white rounded-md px-3 w-28 text-center">Home</p></a>
+          <a href="#scenario">  <p className="mx-5 text-white hover:text-gray-50 duration-700 border-2   border-white-white rounded-md px-3 w-28 text-center">Scenario</p></a>
 
           <a href="#AboutUs">  <p className="mx-5 text-white hover:text-gray-50 duration-700 border-2   border-white-white rounded-md px-3 w-28 text-center">About Us</p></a>
 
           <a href="#Contact">  <p className="mx-5 text-white hover:text-gray-50 duration-700 border-2   border-white-white rounded-md px-3 w-28 text-center">Contact</p></a>
 
-
-
+{/* 
+            <a onClick={() => scrollToRef(homeRef)}>Home</a>
+            <a onClick={() => scrollToRef(scenarioRef)}>Scenario</a>
+            <a onClick={() => scrollToRef(aboutUsRef)}>About Us</a>
+            <a onClick={() => scrollToRef(contactRef)}>Contact</a> */}
           </div>
 
           <VscThreeBars className={toggleCross ? "hidden bg-white text-black rounded-full p-1 text-4xl" : "md:hidden  bg-white text-black rounded-full p-1 text-4xl"}
