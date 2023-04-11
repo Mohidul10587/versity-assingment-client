@@ -37,7 +37,7 @@ function Banner() {
 
 
 
-        <Slider  className="  mx-1" {...settings}>
+        <Slider  className="  " {...settings}>
             {images.map((image) => (
                 <div key={image.id}>
                     <div className="flex justify-between items-center">
