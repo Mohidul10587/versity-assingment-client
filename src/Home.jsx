@@ -1,11 +1,11 @@
 import React from 'react'
-import Banner from './Banner/Banner';
+import img from './Banner/img8.jpg'
 
 const Home = () => {
     return (
         <div className=''>
             <div id='Home' className='pt-20  '>
-                <Banner />
+               <img src={img} className='w-full h-full' alt="" />
             </div>
 
             <div id='AboutUs' className='pt-24  '>
