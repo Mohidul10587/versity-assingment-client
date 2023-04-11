@@ -31,7 +31,7 @@ const Footer = () => {
         </div>
       </div>
     </div>
-    <div className="bg-green-700 text-white text-center py-3 border-t"><p>© Copyright By<span> Layek Md Sony</span>
+    <div className="bg-green-700 text-white text-center py-3 border-t"><p>© Copyright By<a href="https://www.facebook.com/sony.layek44" target='_blank_'> Layek Md Sony</a>
     </p>
     </div>
   </div>
