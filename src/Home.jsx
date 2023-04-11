@@ -55,7 +55,7 @@ const Home = () => {
             <div id='AboutUs' className='pt-24 px-10'>
                 <div className=''>
 
-                    <p className='text-3xl font-bold mb-4 text-center'>We are expetinal Because</p>
+                    <p className='text-3xl font-bold mb-4 text-center'>WHY WE ARE EXEPTIONAL</p>
                     <ul>
                         <li>01.Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia facilis sapiente iusto perspiciatis vitae, corporis odit veritatis odio dignissimos perferendis fugit fugiat architecto, cumque, voluptatum ea repellendus similique accusamus libero!</li>
                         <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia facilis sapiente iusto perspiciatis vitae, corporis odit veritatis odio dignissimos perferendis fugit fugiat architecto, cumque, voluptatum ea repellendus similique accusamus libero!</li>
