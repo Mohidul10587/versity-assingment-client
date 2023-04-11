@@ -32,15 +32,15 @@ const Contact = () => {
 
 
         <div className='md:flex justify-between  md:p-10 px-4 bg-color-first'>
-          <div className=" md:h-[450px] h-[200px] relative md:w-3/4 border-[1px] border-green-600 " >
+          <div className=" md:h-[450px] h-[200px] relative md:w-3/4 border-[1px] border-blue-600 " >
             {/* <Image className='md:p-4 p-1' src='' alt='' fill /> */}
             <img src={location} alt="" />
           </div>
 
           <div className='md:w-1/4 md:pl-4 grid grid-cols-1 gap-y-4 md:mt-0 mt-2'>
-            <div className='border-[1px] border-green-500 md:flex items-center p-4'>
+            <div className='border-[1px] border-blue-500 md:flex items-center p-4'>
 
-              <div className='bg-green-600 p-4'>
+              <div className='bg-blue-600 p-4'>
                 <AiOutlinePhone className='text-xl text-white' />
               </div>
               <div className='md:ml-10'>
@@ -50,9 +50,9 @@ const Contact = () => {
 
               </div>
             </div>
-            <div className='border-[1px] border-green-500 md:flex items-center p-4'>
+            <div className='border-[1px] border-blue-500 md:flex items-center p-4'>
 
-              <div className='bg-green-600 p-4'>
+              <div className='bg-blue-600 p-4'>
                 <AiOutlineMail className='text-xl text-white' />
               </div>
               <div className='md:ml-10'>
@@ -63,9 +63,9 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className='border-[1px] border-green-500 md:flex items-center p-4'>
+            <div className='border-[1px] border-blue-500 md:flex items-center p-4'>
 
-              <div className='bg-green-600 p-4'>
+              <div className='bg-blue-600 p-4'>
                 <FaAddressCard className='text-xl text-white' />
               </div>
               <div className='md:ml-10'>
@@ -93,13 +93,13 @@ const Contact = () => {
               <form ref={form} onSubmit={sendEmail} className='md:w-[1200px] px-4'>
                 <div className='md:flex'>
          
-                  <input className="mt-2 w-full rounded-md p-2 border-[1px] focus:border-2 focus:border-green-600 border-green-600 focus:outline-none  md:mr-4" name="user_name" placeholder='Name' type="text" /><br />
-                  <input className="mt-2 w-full rounded-md p-2 border-[1px] focus:border-2 focus:border-green-600 border-green-600 focus:outline-none  md:mx-2" name="user_email" placeholder='Email' type="email" /><br />
-                  <input className="mt-2 w-full rounded-md p-2 border-[1px] focus:border-2 focus:border-green-600 border-green-600 focus:outline-none  md:ml-4" name="phone" placeholder='Phone' type="phone" /><br />
+                  <input className="mt-2 w-full rounded-md p-2 border-[1px] focus:border-2 focus:border-blue-600 border-blue-600 focus:outline-none  md:mr-4" name="user_name" placeholder='Name' type="text" /><br />
+                  <input className="mt-2 w-full rounded-md p-2 border-[1px] focus:border-2 focus:border-blue-600 border-blue-600 focus:outline-none  md:mx-2" name="user_email" placeholder='Email' type="email" /><br />
+                  <input className="mt-2 w-full rounded-md p-2 border-[1px] focus:border-2 focus:border-blue-600 border-blue-600 focus:outline-none  md:ml-4" name="phone" placeholder='Phone' type="phone" /><br />
                 </div>
-                <textarea className="mt-6 w-full rounded-md p-2 border-[1px] focus:border-2 focus:border-green-600 border-green-600 focus:outline-none" name="message" placeholder='Massage' cols={30} rows={10}></textarea><br />
+                <textarea className="mt-6 w-full rounded-md p-2 border-[1px] focus:border-2 focus:border-blue-600 border-blue-600 focus:outline-none" name="message" placeholder='Massage' cols={30} rows={10}></textarea><br />
 
-                <input className="mt-2 w-full rounded-md p-2 border-[1px] focus:border-2 focus:border-green-600 border-green-600 focus:outline-none hover:bg-color-second  hover:text-green-600 font-bold text-2xl" type="submit" value='SUBMIT' />
+                <input className="mt-2 w-full rounded-md p-2 border-[1px] focus:border-2 focus:border-blue-600 border-blue-600 focus:outline-none hover:bg-color-second  hover:text-blue-600 font-bold text-2xl" type="submit" value='SUBMIT' />
                 <br />
               </form>
             </div>
@@ -118,7 +118,7 @@ const Contact = () => {
 
               {/* <div className='flex justify-center md:h-44 h-24  rounded items-center border-2 border-white mr-8 mt-4 py-10 '>
                 <a href="https://www.facebook.com/profile.php?id=100062570633013" target="_blank" rel="noreferrer">
-                  <BsFacebook className='text-6xl mx-3  hover:text-green-600 hover:bg-white rounded-full px-1 duration-500' />
+                  <BsFacebook className='text-6xl mx-3  hover:text-blue-600 hover:bg-white rounded-full px-1 duration-500' />
                 </a>
 
 

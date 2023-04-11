@@ -8,7 +8,7 @@ const Home = () => {
     return (
         <div className=''>
             <div id='Home' className='pt-20'>
-                <img className='h-[600px] w-full' src='https://img.freepik.com/premium-photo/beautiful-nature-background-green-deciduous-trees-landscape_604451-829.jpg?w=2000' alt="" />
+                <img className='h-[620px] w-full' src={img} alt="" />
             </div>
             <div id='scenario' className='pt-24 px-10'>
                 <h1 className='text-center font-bold text-3xl'>The Most Heart Touching Site In Bangladesh</h1>
