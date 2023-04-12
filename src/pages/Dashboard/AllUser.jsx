@@ -19,7 +19,7 @@ const AllUser = () => {
     })
  },[])
 
-  if (isLoading) return <p className='min-h-[600px]'>Loading</p>
+  if (isLoading) return <p className='min-h-[600px] text-2xl'>Loading...</p>
 
   return (
     <div className='min-h-[600px]'>
