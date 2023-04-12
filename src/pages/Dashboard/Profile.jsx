@@ -13,6 +13,9 @@ const Profile = () => {
  useEffect (()=>{
   fetch(`${url}/currentUser/${currentUser.email}`, {
     method: 'GET',
+    headers:{
+      'content-type': 'application/json',
+    }
   })
     .then(res => res.json())
     .then(data=>{
