@@ -24,13 +24,13 @@ const Login = () => {
         if (user) {
             navigate('/');
         }
-    }, [ from, navigate])
+    }, [user, from, navigate])
 
     let firebaseError;
 
     if (loading ) {
 
-        return <div className='flex justify-center items-center h-screen'> <p>Loading</p>
+        return <div className='flex justify-center items-center h-screen text-2xl'> <p>Loading...</p>
         </div>
     }
 

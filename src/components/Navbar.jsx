@@ -1,21 +1,26 @@
 
 "use client"; // this is a client component
-// import { signOut } from "firebase/auth";
+import { signOut } from "firebase/auth";
 import { useState } from "react";
 import React, { useRef } from 'react';
-// import { useAuthState } from "react-firebase-hooks/auth";
+import { useAuthState } from "react-firebase-hooks/auth";
 import { RxCross2 } from 'react-icons/rx'
 import { VscThreeBars } from 'react-icons/vsc'
 import { Link, useNavigate } from "react-router-dom";
-// import auth from "../authentication/firebase.init";
+import auth from "../firebase.init";
+
 
 
 
 const Navbar = () => {
   const [dropdown, setDropdown] = useState(true)
   const [toggleCross, setToogleCross] = useState(false)
+  const [user] = useAuthState(auth)
 
-
+  const signedOut = () => {
+    signOut(auth);
+    navigate('/logIn');
+  }
 
 
   return (
@@ -37,9 +42,13 @@ const Navbar = () => {
             <a href="/#AboutUs">  <p className="mx-3 text-white hover:text-gray-50 duration-700 border-[1px] w-24  border-blue-800  hover:border-white rounded-md px-2  text-center">About Us</p></a>
 
             <a href="/#Contact">  <p className="mx-3 text-white hover:text-gray-50 duration-700 border-[1px] w-24  border-blue-800  hover:border-white rounded-md px-2  text-center">Contact</p></a>
+            {user ? <div className="flex">
+              <p className="mx-3 text-white hover:text-gray-50 duration-700 border-[1px] w-24  border-blue-800  hover:border-white rounded-md px-2  text-center" onClick={() => signedOut()}>SignOut</p> 
+              <Link className="mx-3 text-white hover:text-gray-50 duration-700 border-[1px] w-24  border-blue-800  hover:border-white rounded-md px-2  text-center" to='/dashboard'>Dadhboard</Link>
+            </div>: <Link className="mx-3 text-white hover:text-gray-50 duration-700 border-[1px] w-24  border-blue-800  hover:border-white rounded-md px-2  text-center" to='/login'>Login</Link>}
 
-            <Link className="mx-3 text-white hover:text-gray-50 duration-700 border-[1px] w-24  border-blue-800  hover:border-white rounded-md px-2  text-center" to='/login'>Login</Link>
-            <Link className="mx-3 text-white hover:text-gray-50 duration-700 border-[1px] w-24  border-blue-800  hover:border-white rounded-md px-2  text-center" to='/profile'>Profile</Link>
+
+          
             {/* 
             <a onClick={() => scrollToRef(homeRef)}>Home</a>
             <a onClick={() => scrollToRef(scenarioRef)}>Scenario</a>

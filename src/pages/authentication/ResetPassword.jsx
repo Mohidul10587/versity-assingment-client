@@ -18,7 +18,7 @@ const ResetPassword = () => {
     }
 
     return (
-        <div className='flex justify-center items-center'>
+        <div className='flex justify-center items-center pt-24'>
             <div className="card w-96 bg-base-100 shadow-xl">
                 <div className="card-body">
                     <h2 className="text-center text-xl">Reset Password</h2>

@@ -7,6 +7,8 @@ import Profile from './pages/Profile';
 import RequireAuth from './pages/authentication/RequireAuth';
 import Login from './pages/authentication/Login';
 import SignUp from './pages/authentication/SingUp';
+import ResetPassword from './pages/authentication/ResetPassword';
+import Dashboard from './pages/Dashboard/Dashboard';
 
 
 
@@ -21,9 +23,11 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='/login' element={<Login />} />
         <Route path='/signUp' element={<SignUp />} />
-
-
-        <Route path='/profile' element={<RequireAuth> <Profile /></RequireAuth>} />
+        <Route path='/resetPassword' element={<ResetPassword />} />
+  
+        <Route path='dashboard' element={<RequireAuth><Dashboard /> </RequireAuth>}>
+              <Route index='profile' element={<Profile></Profile>}></Route>
+            </Route>
       </Routes>
       <Footer />
     </div>
