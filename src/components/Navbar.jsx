@@ -16,7 +16,7 @@ const Navbar = () => {
   const [dropdown, setDropdown] = useState(true)
   const [toggleCross, setToogleCross] = useState(false)
   const [user] = useAuthState(auth)
-
+  const navigate = useNavigate()
   const signedOut = () => {
     signOut(auth);
     navigate('/logIn');
@@ -43,12 +43,12 @@ const Navbar = () => {
 
             <a href="/#Contact">  <p className="mx-3 text-white hover:text-gray-50 duration-700 border-[1px] w-24  border-blue-800  hover:border-white rounded-md px-2  text-center">Contact</p></a>
             {user ? <div className="flex">
-              <p className="mx-3 text-white hover:text-gray-50 duration-700 border-[1px] w-24  border-blue-800  hover:border-white rounded-md px-2  text-center" onClick={() => signedOut()}>SignOut</p> 
+              <p className="mx-3 text-white hover:text-gray-50 duration-700 border-[1px] w-24  border-blue-800  hover:border-white rounded-md px-2  text-center" onClick={() => signedOut()}>SignOut</p>
               <Link className="mx-3 text-white hover:text-gray-50 duration-700 border-[1px] w-24  border-blue-800  hover:border-white rounded-md px-2  text-center" to='/dashboard'>Dadhboard</Link>
-            </div>: <Link className="mx-3 text-white hover:text-gray-50 duration-700 border-[1px] w-24  border-blue-800  hover:border-white rounded-md px-2  text-center" to='/login'>Login</Link>}
+            </div> : <Link className="mx-3 text-white hover:text-gray-50 duration-700 border-[1px] w-24  border-blue-800  hover:border-white rounded-md px-2  text-center" to='/login'>Login</Link>}
 
 
-          
+
             {/* 
             <a onClick={() => scrollToRef(homeRef)}>Home</a>
             <a onClick={() => scrollToRef(scenarioRef)}>Scenario</a>
