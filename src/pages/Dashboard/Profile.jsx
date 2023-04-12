@@ -7,29 +7,28 @@ import url from '../../components/url'
 
 const Profile = () => {
   const [currentUser] = useAuthState(auth)
-  const [user ,setUser]= useState({})
-  const [isLoading ,setIsLoading] = useState(true)
+  const [user, setUser] = useState({})
+  const [isLoading, setIsLoading] = useState(true)
 
- useEffect (()=>{
-  fetch(`${url}/currentUser/${currentUser.email}`, {
-    method: 'GET',
-    headers:{
-      'content-type': 'application/json',
-    }
-  })
-    .then(res => res.json())
-    .then(data=>{
-      console.log(data)
-      setUser(data)
-      setIsLoading(false)
+  useEffect(() => {
+    fetch(`${url}/currentUser/${currentUser.email}`, {
+      method: 'GET',
+      headers: {
+        'content-type': 'application/json',
+      }
     })
- },[])
+      .then(res => res.json())
+      .then(data => {
+        setUser(data)
+        setIsLoading(false)
+      })
+  }, [currentUser])
 
   if (isLoading) return <p className='min-h-[600px]'>Loading</p>
   return (
     <div className=''>
-       <p>Name : {user.name}</p>
-       <p>Email : {user.email}</p>
+      <p>Name : {user.name}</p>
+      <p>Email : {user.email}</p>
 
     </div>
   )
