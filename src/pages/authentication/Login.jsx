@@ -44,10 +44,10 @@ const Login = () => {
 
     }
     return (
-        <div className='flex justify-center items-center pt-24'>
-            <div className="card w-96 bg-base-100 shadow-xl">
+        <div className='flex justify-center items-center pt-24  min-h-screen'>
+            <div className="card w-96 bg-base-100 shadow-blue-600 shadow-xl border-[1px] border-blue-500">
                 <div className="card-body">
-                    <h2 className="text-center text-xl">Log in</h2>
+                    <h2 className="text-center text-xl font-bold">Log In</h2>
                     <form onSubmit={handleSubmit(onSubmit)}>
 
 
@@ -126,10 +126,7 @@ const Login = () => {
                    
                     </div>
 
-                    <div className="divider">OR</div>
-
-                    <button onClick={() => signInWithGoogle()}     className="btn btn-outline w-full hover:bg-blue-700">Continue with google</button>
-
+                
 
                   
 

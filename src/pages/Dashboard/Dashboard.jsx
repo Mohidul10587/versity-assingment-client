@@ -29,8 +29,7 @@ const Dashboard = () => {
         <ul className="menu p-4 sm:w-72 w-56 bg-blue-600 text-base-content">
           {/* <!-- Sidebar content here --> */}
           <li className='mb-2 bg-white rounded-md'> <Link to='/dashboard'>Profile</Link></li>
-        
-
+          <li className='mb-2 bg-white rounded-md'> <Link to='/dashboard/allUser'>All Users</Link></li>
 
         </ul>
 
