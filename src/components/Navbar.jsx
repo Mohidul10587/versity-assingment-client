@@ -31,14 +31,16 @@ const Navbar = () => {
           {/* menu for md device */}
           <div className="md:flex hidden" >
 
-            <a href="#Home"> <p className="mx-5 text-white hover:text-gray-50 duration-700 border-2   border-white-white rounded-md px-3 w-28 text-center">Home</p></a>
-          <a href="#scenario">  <p className="mx-5 text-white hover:text-gray-50 duration-700 border-2   border-white-white rounded-md px-3 w-28 text-center">Scenario</p></a>
+            <a href="/#Home"> <p className="mx-3 text-white hover:text-gray-50 duration-700 border-[1px] w-24  border-blue-800  hover:border-white rounded-md px-2  text-center">Home</p></a>
+            <a href="/#scenario">  <p className="mx-3 text-white hover:text-gray-50 duration-700 border-[1px] w-24  border-blue-800  hover:border-white rounded-md px-2  text-center">Scenario</p></a>
 
-          <a href="#AboutUs">  <p className="mx-5 text-white hover:text-gray-50 duration-700 border-2   border-white-white rounded-md px-3 w-28 text-center">About Us</p></a>
+            <a href="/#AboutUs">  <p className="mx-3 text-white hover:text-gray-50 duration-700 border-[1px] w-24  border-blue-800  hover:border-white rounded-md px-2  text-center">About Us</p></a>
 
-          <a href="#Contact">  <p className="mx-5 text-white hover:text-gray-50 duration-700 border-2   border-white-white rounded-md px-3 w-28 text-center">Contact</p></a>
+            <a href="/#Contact">  <p className="mx-3 text-white hover:text-gray-50 duration-700 border-[1px] w-24  border-blue-800  hover:border-white rounded-md px-2  text-center">Contact</p></a>
 
-{/* 
+            <Link className="mx-3 text-white hover:text-gray-50 duration-700 border-[1px] w-24  border-blue-800  hover:border-white rounded-md px-2  text-center" to='/login'>Login</Link>
+            <Link className="mx-3 text-white hover:text-gray-50 duration-700 border-[1px] w-24  border-blue-800  hover:border-white rounded-md px-2  text-center" to='/profile'>Profile</Link>
+            {/* 
             <a onClick={() => scrollToRef(homeRef)}>Home</a>
             <a onClick={() => scrollToRef(scenarioRef)}>Scenario</a>
             <a onClick={() => scrollToRef(aboutUsRef)}>About Us</a>

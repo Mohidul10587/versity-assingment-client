@@ -1,8 +1,8 @@
 import React from 'react'
-import img from './assets/img8.jpg'
+import img from '../assets/img8.jpg'
 
 
-import Contact from './Contact'
+import Contact from '../Contact'
 
 const Home = () => {
     return (
