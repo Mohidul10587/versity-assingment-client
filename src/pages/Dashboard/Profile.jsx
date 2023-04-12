@@ -19,6 +19,7 @@ const Profile = () => {
   })
     .then(res => res.json())
     .then(data=>{
+      console.log(data)
       setUser(data)
       setIsLoading(false)
     })
