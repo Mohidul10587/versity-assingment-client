@@ -10,7 +10,7 @@ import auth from '../firebase.init'
 const Home = () => {
 
 const [user] = useAuthState(auth)
-console.log(user.email)
+
     const [reviews, setReviews] = useState([])
     const [isLoading, setIsLoading] = useState(true)
 
