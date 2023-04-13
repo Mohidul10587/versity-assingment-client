@@ -2,3 +2,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.radio:checked + .label-text::before {
+    border-color: blue;
+    background-color: blue;
+}

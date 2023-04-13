@@ -29,6 +29,10 @@ const Profile = () => {
     <div className=''>
       <p>Name : {user.name}</p>
       <p>Email : {user.email}</p>
+      <p>Age : {user.Age}</p>
+      <p>Gender : {user.gender}</p>
+
+
 
     </div>
   )

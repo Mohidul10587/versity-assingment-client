@@ -4,18 +4,19 @@ import { useAuthState } from 'react-firebase-hooks/auth'
 import { Link, Outlet } from 'react-router-dom'
 import auth from '../../firebase.init'
 
-import {GoThreeBars} from 'react-icons/go'
+import { GoThreeBars } from 'react-icons/go'
+import useAdmin from '../../hooks/useAdmin'
 
 
 const Dashboard = () => {
 
   const [user] = useAuthState(auth)
-
+  const [admin] = useAdmin(user)
 
   return (
 
 
-    <div className="drawer drawer-mobile sm:mx-2 pt-24">
+    <div className="drawer drawer-mobile sm:mx-2 md:pt-24 pt-16">
       <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content sm:px-2">
         {/* <!-- Page content here --> */}
@@ -29,8 +30,10 @@ const Dashboard = () => {
         <ul className="menu p-4 sm:w-72 w-56 bg-blue-600 text-base-content">
           {/* <!-- Sidebar content here --> */}
           <li className='mb-2 bg-white rounded-md'> <Link to='/dashboard'>Profile</Link></li>
-          <li className='mb-2 bg-white rounded-md'> <Link to='/dashboard/allUser'>All Users</Link></li>
 
+          <li className='mb-2 bg-white rounded-md'> <Link to='/dashboard/review'>Give Review</Link></li>
+
+          {admin && <li className='mb-2 bg-white rounded-md'> <Link to='/dashboard/allUser'>All Users</Link></li>}
         </ul>
 
       </div>

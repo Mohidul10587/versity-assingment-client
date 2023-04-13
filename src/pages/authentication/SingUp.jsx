@@ -1,6 +1,5 @@
-import { sendEmailVerification } from 'firebase/auth';
 import React from 'react'
-import { useCreateUserWithEmailAndPassword, useUpdateProfile, useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
@@ -19,38 +18,33 @@ const SignUp = () => {
         error,
     ] = useCreateUserWithEmailAndPassword(auth);
     const navigate = useNavigate()
-    // let location = useLocation();
-    // let from = location.state?.from?.pathname || "/";
     const [updateProfile, updateError] = useUpdateProfile(auth);
 
-  
 
-   
 
-    if (loading ) return <div className='flex justify-center items-center h-screen'> <p>Loading...</p>
+
+
+    if (loading) return <div className='flex justify-center items-center h-screen'> <p>Loading...</p>
     </div>
     let firebaseError;
-    if (error || updateError ) {
+    if (error || updateError) {
         firebaseError = <small className='text-red-500'>{error?.message || updateError?.message}</small>
     }
     if (user) {
-        sendEmailVerification(auth.currentUser)
-        .then(() => {
-          alert(`An verification email has sent for verify to ${user?.user.email}`)
-        });
-        navigate('/');
+         navigate('/');
     }
     const onSubmit = async data => {
         fetch(`${url}/createUser`, {
             method: 'POST',
             headers: {
-              'Content-Type': 'application/json'
+                'Content-Type': 'application/json'
             },
             body: JSON.stringify(data)
-          })
+        })
             .then(response => response.json())
             .then(data => console.log(data))
             .catch(error => console.error(error));
+            
         await createUserWithEmailAndPassword(data.email, data.password)
         await updateProfile({ displayName: data.name });
     }
@@ -70,50 +64,74 @@ const SignUp = () => {
                                 type="text"
                                 placeholder="Name"
                                 className="input input-bordered border-black w-full max-w-xs"
-
-                                {...register("name", {
-                                    required: {
-                                        value: true,
-                                        message: 'This is required field'
-                                    }
-
-                                })} />
-
-                            <label className="label">
-
-                                {errors.name?.type === 'required' && <span className='text-red-500'>{errors.name?.message}</span>}
-
-                            </label>
-
+                                {...register("name")} required />
                         </div>
 
+                        {/* Age */}
+                        <div className="form-control w-full max-w-xs">
+                            <label className="label">
+                                <span className="label-text">Age</span>
+                            </label>
+                            <input
+                                type="number"
+                                placeholder="Age"
+                                className="input input-bordered border-black w-full max-w-xs"
+                                {...register("Age")} required />
+                        </div>
+
+                        {/* Gender */}
+                        <div className="form-control w-full max-w-xs">
+                            <label className="label">
+                                <span className="label-text">Gender</span>
+                            </label>
+                            <div className="flex items-center justify-between border-[1px] border-black rounded-lg px-4 py-2.5">
+                                <label className='flex items-center'>
+                                    <input
+                                        type="radio"
+                                        value="male"
+                                        className="radio checked:bg-blue-700 border-[.5px] border-black w-5 h-5"
+                                        {...register("gender", { required: true })}
+                                        required
+                                    />
+                                    <span className="label-text ml-2">Male</span>
+                                </label>
+
+                                <label className='flex items-center'>
+                                    <input
+                                        type="radio"
+                                        value="female"
+                                        className="radio checked:bg-blue-700 border-[.5px] border-black w-5 h-5"
+                                        {...register("gender", { required: true })}
+                                        required
+                                    />
+                                    <span className="label-text ml-2">Female</span>
+                                </label>
+                                <label className='flex items-center'>
+                                    <input
+                                        type="radio"
+                                        value="other"
+                                        className="radio checked:bg-blue-700 border-[.5px] border-black w-5 h-5"
+                                        {...register("gender", { required: true })}
+                                        required
+                                    />
+                                    <span className="label-text ml-2">Other</span>
+                                </label>
+                            </div>
+                            {errors.gender && <span className="text-red-500">This field is required</span>}
+                        </div>
+
+
+                        {/* Email  */}
                         <div className="form-control w-full max-w-xs">
                             <label className="label">
                                 <span className="label-text">Email</span>
-
                             </label>
                             <input
 
                                 type="email"
                                 placeholder="Email"
                                 className="input input-bordered border-black w-full max-w-xs"
-
-                                {...register("email", {
-                                    required: {
-                                        value: true,
-                                        message: 'This is required field'
-                                    },
-                                    pattern: {
-                                        value: /[A-Za-z]{3}/,
-                                        message: 'This is wrong email'
-                                    }
-                                })} />
-
-                            <label className="label">
-
-                                {errors.email?.type === 'required' && <span className='text-red-500'>{errors.email?.message}</span>}
-                                {errors.email?.type === 'pattern' && <span className='text-red-500'>{errors.email?.message}</span>}
-                            </label>
+                                {...register("email")} required />
 
                         </div>
 
@@ -124,7 +142,6 @@ const SignUp = () => {
 
                             </label>
                             <input
-
                                 type="password"
                                 placeholder="password"
                                 className="input input-bordered border-black w-full max-w-xs"
@@ -156,7 +173,7 @@ const SignUp = () => {
                     </form>
                     <small>Already have an account ?<Link className='text-blue-700 ml-4' to='/logIn'>Go to Login</Link></small>
 
-                  
+
 
 
 

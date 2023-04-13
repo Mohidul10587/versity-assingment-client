@@ -29,14 +29,13 @@ const Navbar = () => {
 
       <nav className="" >
         <div className="shadow-gray-500 shadow-md  bg-color-first  flex justify-between  md:h-14 h-10 md:px-12 px-2 md:py-10 py-6 items-center fixed w-full bg-blue-800  z-30">
-          <Link to='/'>  <div className="text-white md:text-3xl text-2xl italic">
+          <Link to='/'>  <div className="text-white md:text-3xl text-xl italic">
             <p className="font-bold">Travel Agency Bangladesh</p>
           </div></Link>
 
           {/* menu for md device */}
           <div className="md:flex hidden" >
-
-            <a href="/#Home"> <p className="mx-3 text-white hover:text-gray-50 duration-700 border-[1px] w-24  border-blue-800  hover:border-white rounded-md px-2  text-center">Home</p></a>
+          <a href="/#Home"> <p className="mx-3 text-white hover:text-gray-50 duration-700 border-[1px] w-24  border-blue-800  hover:border-white rounded-md px-2  text-center">Home</p></a>
             <a href="/#scenario">  <p className="mx-3 text-white hover:text-gray-50 duration-700 border-[1px] w-24  border-blue-800  hover:border-white rounded-md px-2  text-center">Scenario</p></a>
 
             <a href="/#AboutUs">  <p className="mx-3 text-white hover:text-gray-50 duration-700 border-[1px] w-24  border-blue-800  hover:border-white rounded-md px-2  text-center">About Us</p></a>
@@ -49,21 +48,17 @@ const Navbar = () => {
 
 
 
-            {/* 
-            <a onClick={() => scrollToRef(homeRef)}>Home</a>
-            <a onClick={() => scrollToRef(scenarioRef)}>Scenario</a>
-            <a onClick={() => scrollToRef(aboutUsRef)}>About Us</a>
-            <a onClick={() => scrollToRef(contactRef)}>Contact</a> */}
+
           </div>
 
-          <VscThreeBars className={toggleCross ? "hidden bg-white text-black rounded-full p-1 text-4xl" : "md:hidden  bg-white text-black rounded-full p-1 text-4xl"}
+          <VscThreeBars className={toggleCross ? "hidden bg-white text-black rounded-full p-1  text-3xl" : "md:hidden  bg-white text-black rounded-full p-1  text-3xl"}
             onClick={() => {
 
               setDropdown(!dropdown)
               setToogleCross(true)
 
             }} />
-          <RxCross2 className={toggleCross ? "md:hidden bg-white text-black rounded-full p-1 text-4xl" : "hidden  bg-white text-black rounded-full p-1 text-4xl"}
+          <RxCross2 className={toggleCross ? "md:hidden bg-white text-black rounded-full p-1  text-3xl" : "hidden  bg-white text-black rounded-full p-1  text-3xl"}
             onClick={() => {
 
               setDropdown(true)
@@ -76,7 +71,17 @@ const Navbar = () => {
             setToogleCross(false)
           }} className={dropdown ? 'rounded-b  bg-blue-600 md:hidden fixed  top-12 w-64   z-30 -left-64 transition-all duration-700' : 'md:hidden fixed , top-12 w-64 left-0 transition-all duration-700 rounded-b bg-blue-600'} >
 
-            <Link to='/'>  <p className=" border-2 border-white  px-2 py-2 mx-2 bg-white rounded my-3 ">Home</p></Link>
+            <a href='/#Home'>  <p className=" border-2 border-white hover:font-bold px-2 py-2 mx-2 bg-white rounded my-3 ">Home</p></a>
+            <a href="/#scenario">  <p className=" border-2 border-white hover:font-bold px-2 py-2 mx-2 bg-white rounded my-3 ">Scenario</p></a>
+
+            <a href="/#AboutUs">  <p className=" border-2 border-white hover:font-bold px-2 py-2 mx-2 bg-white rounded my-3 ">About Us</p></a>
+
+            <a href="/#Contact">  <p className=" border-2 border-white hover:font-bold px-2 py-2 mx-2 bg-white rounded my-3 ">Contact</p></a>
+            {user ? <div>
+              <p className=" border-2 border-white hover:font-bold px-2 py-2 mx-2 bg-white rounded my-3 " onClick={() => signedOut()}>SignOut</p>
+              <Link  to='/dashboard'> <p className=" border-2 border-white hover:font-bold px-2 py-2 mx-2 bg-white rounded my-3 ">Dadhboard</p> </Link>
+            </div> : <Link className=" border-2 border-white hover:font-bold px-2 py-2 mx-2 bg-white rounded my-3 " to='/login'>Login</Link>}
+
 
           </div>
         </div>

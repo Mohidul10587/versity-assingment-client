@@ -10,6 +10,7 @@ import SignUp from './pages/authentication/SingUp';
 import ResetPassword from './pages/authentication/ResetPassword';
 import Dashboard from './pages/Dashboard/Dashboard';
 import AllUser from './pages/Dashboard/AllUser';
+import MyReview from './pages/Dashboard/MyReview';
 
 
 
@@ -29,6 +30,8 @@ function App() {
         <Route path='dashboard' element={<RequireAuth><Dashboard /> </RequireAuth>}>
               <Route index='profile' element={<Profile></Profile>}></Route>
               <Route path='allUser' element={<AllUser />}></Route>
+              <Route path='review' element={<MyReview />}></Route>
+
             </Route>
       </Routes>
       <Footer />
