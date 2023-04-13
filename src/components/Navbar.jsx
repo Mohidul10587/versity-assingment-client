@@ -35,7 +35,7 @@ const Navbar = () => {
 
           {/* menu for md device */}
           <div className="md:flex hidden" >
-          <a href="/#Home"> <p className="mx-3 text-white hover:text-gray-50 duration-700 border-[1px] w-24  border-blue-800  hover:border-white rounded-md px-2  text-center">Home</p></a>
+            <a href="/#Home"> <p className="mx-3 text-white hover:text-gray-50 duration-700 border-[1px] w-24  border-blue-800  hover:border-white rounded-md px-2  text-center">Home</p></a>
             <a href="/#scenario">  <p className="mx-3 text-white hover:text-gray-50 duration-700 border-[1px] w-24  border-blue-800  hover:border-white rounded-md px-2  text-center">Scenario</p></a>
 
             <a href="/#AboutUs">  <p className="mx-3 text-white hover:text-gray-50 duration-700 border-[1px] w-24  border-blue-800  hover:border-white rounded-md px-2  text-center">About Us</p></a>
@@ -79,7 +79,7 @@ const Navbar = () => {
             <a href="/#Contact">  <p className=" border-2 border-white hover:font-bold px-2 py-2 mx-2 bg-white rounded my-3 ">Contact</p></a>
             {user ? <div>
               <p className=" border-2 border-white hover:font-bold px-2 py-2 mx-2 bg-white rounded my-3 " onClick={() => signedOut()}>SignOut</p>
-              <Link  to='/dashboard'> <p className=" border-2 border-white hover:font-bold px-2 py-2 mx-2 bg-white rounded my-3 ">Dadhboard</p> </Link>
+              <Link to='/dashboard'> <p className=" border-2 border-white hover:font-bold px-2 py-2 mx-2 bg-white rounded my-3 ">Dadhboard</p> </Link>
             </div> : <Link className=" border-2 border-white hover:font-bold px-2 py-2 mx-2 bg-white rounded my-3 " to='/login'>Login</Link>}
 
 
