@@ -6,6 +6,8 @@ import React, { useRef } from 'react';
 import { useAuthState } from "react-firebase-hooks/auth";
 import { RxCross2 } from 'react-icons/rx'
 import { VscThreeBars } from 'react-icons/vsc'
+import { FaDove } from 'react-icons/fa'
+
 import { Link, useNavigate } from "react-router-dom";
 import auth from "../firebase.init";
 
@@ -30,7 +32,7 @@ const Navbar = () => {
       <nav className="" >
         <div className="shadow-gray-500 shadow-md  bg-color-first  flex justify-between  md:h-14 h-10 md:px-12 px-2 md:py-10 py-6 items-center fixed w-full bg-blue-800  z-30">
           <Link to='/'>  <div className="text-white md:text-3xl text-xl italic">
-            <p className="font-bold">Travel Agency Bangladesh</p>
+            <div className="font-bold flex items-center"><p className="mr-1">TRAVEL BD</p> <FaDove/></div>
           </div></Link>
 
           {/* menu for md device */}
