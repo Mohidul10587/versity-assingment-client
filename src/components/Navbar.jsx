@@ -29,7 +29,6 @@ const Navbar = () => {
     // <div className="md:pb-24 pb-14">
     <div>
 
-      <nav className="" >
         <div className="shadow-gray-500 shadow-md  bg-color-first  flex justify-between  md:h-14 h-10 md:px-12 px-2 md:py-10 py-6 items-center fixed w-full bg-blue-800  z-30">
           <Link to='/'>  <div className="text-white md:text-3xl text-xl italic">
             <div className="font-bold flex items-center"><p className="mr-1">TRAVEL BD</p> <FaDove/></div>
@@ -47,10 +46,6 @@ const Navbar = () => {
               <p className="mx-3 text-white hover:text-gray-50 duration-700 border-[1px] w-24  border-blue-800  hover:border-white rounded-md px-2  text-center" onClick={() => signedOut()}>SignOut</p>
               <Link className="mx-3 text-white hover:text-gray-50 duration-700 border-[1px] w-24  border-blue-800  hover:border-white rounded-md px-2  text-center" to='/dashboard'>Dadhboard</Link>
             </div> : <Link className="mx-3 text-white hover:text-gray-50 duration-700 border-[1px] w-24  border-blue-800  hover:border-white rounded-md px-2  text-center" to='/login'>Login</Link>}
-
-
-
-
           </div>
 
           <VscThreeBars className={toggleCross ? "hidden bg-white text-black rounded-full p-1  text-3xl" : "md:hidden  bg-white text-black rounded-full p-1  text-3xl"}
@@ -83,13 +78,8 @@ const Navbar = () => {
               <p className=" border-2 border-white hover:font-bold px-2 py-2 mx-2 bg-white rounded my-3 " onClick={() => signedOut()}>SignOut</p>
               <Link to='/dashboard'> <p className=" border-2 border-white hover:font-bold px-2 py-2 mx-2 bg-white rounded my-3 ">Dadhboard</p> </Link>
             </div> : <Link  to='/login'><p className=" border-2 border-white hover:font-bold px-2 py-2 mx-2 bg-white rounded my-3 ">Login</p></Link>}
-
-
           </div>
         </div>
-
-      </nav>
-
     </div>
   );
 };

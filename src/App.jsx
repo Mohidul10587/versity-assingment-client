@@ -11,6 +11,8 @@ import ResetPassword from './pages/authentication/ResetPassword';
 import Dashboard from './pages/Dashboard/Dashboard';
 import AllUser from './pages/Dashboard/AllUser';
 import MyReview from './pages/Dashboard/MyReview';
+import mass from '../src/assets/mas.svg';
+import { BsMessenger } from 'react-icons/bs';
 
 
 
@@ -19,7 +21,7 @@ function App() {
 
   return (
    
-    <div>
+    <div className='relative'>
       <Navbar />
       <Routes>
         <Route path='/' element={<Home />} />
@@ -35,6 +37,8 @@ function App() {
             </Route>
       </Routes>
       <Footer />
+
+      <a href="https://www.facebook.com/messages/t/100064805559031" target='_blank_'> <p className='fixed z-50 md:bottom-10 md:right-10 right-2 bottom-2 text-3xl '> <BsMessenger className='bg-white p-1 md:w-16 md:h-16 text-blue-900 rounded-full'  /></p></a>
     </div>
   )
 }
