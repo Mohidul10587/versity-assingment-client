@@ -26,19 +26,22 @@ const Profile = () => {
 
   if (isLoading) return <p className='min-h-[600px] text-2xl'>Loading...</p>
   return (
-    <div className='-mt-10'>
+    <div className='md:-mt-10'>
 
       <div className='h-44   relative'>
 
         <img className='h-44 w-full' src="https://png.pngtree.com/background/20210710/original/pngtree-company-profile-corporate-culture-brochure-cross-page-design-background-material-picture-image_1011696.jpg" alt="" />
 
-        <img className='border absolute bottom-0 border-black rounded-full w-24 h-24' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOH2aZnIHWjMQj2lQUOWIL2f4Hljgab0ecZQ&usqp=CAU" alt="" />
+        <img className='border absolute  -bottom-10 border-black rounded-full w-24 h-24' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOH2aZnIHWjMQj2lQUOWIL2f4Hljgab0ecZQ&usqp=CAU" alt="" />
       </div>
 
 
 
-      <div>
+      <div className='mt-16'>
         <p>Name : {user.name}</p>
+        <p>Education: BSC in Computer Science and Technology</p>
+
+<p>Address: Dhaka, Bangladesh</p>
         <p>Email : {user.email}</p>
         <p>Age : {user.Age}</p>
         <p>Gender : {user.gender}</p>
