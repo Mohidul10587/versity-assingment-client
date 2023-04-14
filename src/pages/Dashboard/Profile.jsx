@@ -40,8 +40,7 @@ const Profile = () => {
       <div className='mt-16'>
         <p>Name : {user.name}</p>
         <p>Education: BSC in Computer Science and Technology</p>
-
-<p>Address: Dhaka, Bangladesh</p>
+        <p>Address: Dhaka, Bangladesh</p>
         <p>Email : {user.email}</p>
         <p>Age : {user.Age}</p>
         <p>Gender : {user.gender}</p>
