@@ -20,10 +20,7 @@ const MyReview = () => {
             alert('Ratings should be 1 to 5 . Thank you')
             return
         }
-        if (review.length > 250) {
-            alert(`${review.length} Review should be 1 to 250 characters . Thank you`)
-            return
-        }
+       
         fetch(`${url}/review`, {
             method: 'POST',
             headers: {

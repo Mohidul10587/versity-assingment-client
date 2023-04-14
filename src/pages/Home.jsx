@@ -185,7 +185,7 @@ const Home = () => {
                 <h1 className='text-3xl font-bold mb-4 text-center'>TESTIMONIALS</h1>
 
                 {isLoading ? <p className='text-center text-2xl mt-10'>Loading...</p> : <div className='grid md:grid-cols-2 grid-cols-1 gap-4 mt-16'>
-                    {reviews.slice(-4).reverse().map((r, index) => <div key={r._id} className='md:flex items-center p-2 border border-blue-600 mt-2 rounded-lg md:h-44 shadow-lg shadow-blue-500'>
+                    {reviews.slice(-4).map((r, index) => <div key={r._id} className='md:flex items-center p-2 border border-blue-600 mt-2 rounded-lg md:h-44 shadow-lg shadow-blue-500'>
                         <div className='md:w-2/12 w-full mr-4 '>
                             <img src="https://png.pngtree.com/png-vector/20190710/ourmid/pngtree-user-vector-avatar-png-image_1541962.jpg" className='h-12 w-12 rounded-full border-blue-600 border-2' alt="" srcset="" />
                         </div>
