@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import img from '../assets/img8.jpg'
+import img2 from '../assets/ban.png'
+
 import { AiFillStar } from 'react-icons/ai'
 
 import Contact from '../Contact'
@@ -26,18 +28,18 @@ const [user] = useAuthState(auth)
             })
     }, [])
 
-    if (isLoading) return <p className='min-h-[600px] text-2xl'>Loading...</p>
 
     const icon = <p className='text-orange-500'><AiFillStar /></p>
     console.log(reviews)
     return (
         <div className=''>
-            <div id='Home' className='pt-20'>
-                <img className='h-full w-full' src={img} alt="" />
+            <div id='Home' className='md:pt-10 pt-10'>
+                <img className=' h-screen w-full md:block hidden' src={img} alt="" />
+                <img className=' h-screen w-full block md:hidden' src={img2} alt="" />
             </div>
             <div id='scenario' className='pt-24 md:px-10 px-4'>
                 <h1 className='text-3xl font-bold mb-4 text-center'>The Most Heart Touching Site In Bangladesh</h1>
-                <div className=' w-full  md:flex justify-between mt-10 border-[1px] border-black'>
+                <div className=' w-full  md:flex justify-between mt-10 border-[1px] border-blue-600 rounded-lg overflow-hidden'>
                     <div className='md:w-1/2'>
                         <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/10/e2/f8/43/longest-sea-beach-in.jpg?w=700&h=-1&s=1" alt="" />
                     </div>
@@ -50,7 +52,7 @@ const [user] = useAuthState(auth)
                 </div>
 
 
-                <div className='w-full md:flex justify-between mt-10 border-[1px] border-black'>
+                <div className='w-full md:flex justify-between mt-10 border-[1px] border-blue-600 rounded-lg overflow-hidden'>
                     <div className='md:w-1/2'>
                         <img className='w-full h-full' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbQyQNZRk6G64rRIWzV4YusXMCcVC4KmW3TQ&usqp=CAU" alt="" />
                     </div>
@@ -64,7 +66,7 @@ const [user] = useAuthState(auth)
                 </div>
                 {/* third  img*/}
 
-                <div className=' w-full  md:flex justify-between mt-10 border-[1px] border-black'>
+                <div className=' w-full  md:flex justify-between mt-10 border-[1px] border-blue-600 rounded-lg overflow-hidden'>
                     <div className='md:w-1/2'>
                         <img className='w-full h-full' src="https://upload.wikimedia.org/wikipedia/commons/3/37/Kuakata_beach.jpg" alt="" />
                     </div>
@@ -78,7 +80,7 @@ const [user] = useAuthState(auth)
 
                 {/* fourth */}
 
-                <div className=' w-full  md:flex justify-between mt-10 border-[1px] border-black'>
+                <div className=' w-full  md:flex justify-between mt-10 border-[1px] border-blue-600 rounded-lg overflow-hidden'>
                     <div className='md:w-1/2'>
                         <img className='w-full h-full' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbQyQNZRk6G64rRIWzV4YusXMCcVC4KmW3TQ&usqp=CAU" alt="" />
                     </div>
@@ -92,7 +94,7 @@ const [user] = useAuthState(auth)
                 </div>
                 {/* fifth */}
 
-                <div className=' w-full  md:flex justify-between mt-10 border-[1px] border-black'>
+                <div className=' w-full  md:flex justify-between mt-10 border-[1px] border-blue-600 rounded-lg overflow-hidden'>
                     <div className='md:w-1/2'>
                         <img className='w-full h-full' src="https://upload.wikimedia.org/wikipedia/commons/3/37/Kuakata_beach.jpg" alt="" />
                     </div>
@@ -126,12 +128,12 @@ const [user] = useAuthState(auth)
 
             <div id='review' className='md:px-16 px-4 pt-24'>
 
-                <h1 className='text-3xl font-bold mb-4 text-center'>Tesmonials</h1>
+                <h1 className='text-3xl font-bold mb-4 text-center'>Testmonials</h1>
 
-                <div className='grid md:grid-cols-2 grid-cols-1 gap-4 mt-16'>
-                    {reviews.map((r, index) => <div key={r._id} className='md:flex items-center p-2 border-2 border-black mt-2 rounded-lg'>
+               {isLoading ? <p className='text-center text-2xl mt-10'>Loading...</p>: <div className='grid md:grid-cols-2 grid-cols-1 gap-4 mt-16'>
+                    {reviews.map((r, index) => <div key={r._id} className='md:flex items-center p-2 border-2 border-blue-600 mt-2 rounded-lg md:h-44'>
                         <div className='md:w-2/12 w-full mr-4 '>
-                            <img src="https://png.pngtree.com/png-vector/20190710/ourmid/pngtree-user-vector-avatar-png-image_1541962.jpg" className='h-12 w-12 rounded-full border-black border-2' alt="" srcset="" />
+                            <img src="https://png.pngtree.com/png-vector/20190710/ourmid/pngtree-user-vector-avatar-png-image_1541962.jpg" className='h-12 w-12 rounded-full border-blue-600 border-2' alt="" srcset="" />
                         </div>
                         <div className='md:w-10/12 pr-4'>
                             <div className='flex justify-between'>
@@ -150,13 +152,13 @@ const [user] = useAuthState(auth)
                             <p className='text-justify'>{r.review.slice(0, 100)}{r.review.length > 101 && '.....'}</p>
                             {r.review.length > 101 && <div>
                                 <p className='mt-2'>
-                                    <label htmlFor={`${index}`} className='border-[.5px] border-black rounded p-1 font-light'>Read More</label>
+                                    <label htmlFor={`${index}`} className='border-[.5px] border-blue-600 rounded p-1 font-light'>Read More</label>
                                 </p>
                                 <input type="checkbox" id={`${index}`} className="modal-toggle" />
                                 <div className="modal md:mt-0 m-0">
                                     <div className="modal-box m-0  p-2">
                                         <div className='text-end m-0'>
-                                            <label className="border-2 border-black rounded-full  px-1 font-bold" htmlFor={`${index}`} >x</label></div>
+                                            <label className="border-2 border-blue-600 rounded-full  px-1 font-bold" htmlFor={`${index}`} >x</label></div>
                                         <div className="modal-action p-0 flex justify-start">
                                             <div className=' w-full  pb-4 px-4'>
                                                 <p className='text-justify'>{r.review}</p>
@@ -168,7 +170,7 @@ const [user] = useAuthState(auth)
                             </div>}
                         </div>
                     </div>)}
-                </div>
+                </div>}
             </div>
         </div>
     )
