@@ -66,7 +66,7 @@ const Contact = () => {
               <div className='md:ml-10'>
                 <h1 className='text-2xl font-bold mb-2'>Adress</h1>
 
-              
+              <p>Xishan Avenue, Xishan District, Wuxi, Wuxi, Jiangsu, China</p>
 
               </div>
             </div>
