@@ -80,7 +80,7 @@ const Navbar = () => {
             {user ? <div>
               <p className=" border-2 border-white hover:font-bold px-2 py-2 mx-2 bg-white rounded my-3 " onClick={() => signedOut()}>SignOut</p>
               <Link to='/dashboard'> <p className=" border-2 border-white hover:font-bold px-2 py-2 mx-2 bg-white rounded my-3 ">Dadhboard</p> </Link>
-            </div> : <Link className=" border-2 border-white hover:font-bold px-2 py-2 mx-2 bg-white rounded my-3 " to='/login'>Login</Link>}
+            </div> : <Link  to='/login'><p className=" border-2 border-white hover:font-bold px-2 py-2 mx-2 bg-white rounded my-3 ">Login</p></Link>}
 
 
           </div>

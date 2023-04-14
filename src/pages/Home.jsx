@@ -30,7 +30,6 @@ const [user] = useAuthState(auth)
 
 
     const icon = <p className='text-orange-500'><AiFillStar /></p>
-    console.log(reviews)
     return (
         <div className=''>
             <div id='Home' className='md:pt-10 pt-10'>
