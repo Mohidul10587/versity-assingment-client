@@ -88,7 +88,7 @@ const SignUp = () => {
                                 <label className='flex items-center'>
                                     <input
                                         type="radio"
-                                        value="male"
+                                        value="Male"
                                         className="radio checked:bg-blue-700 border-[.5px] border-black w-5 h-5"
                                         {...register("gender", { required: true })}
                                         required
@@ -99,7 +99,7 @@ const SignUp = () => {
                                 <label className='flex items-center'>
                                     <input
                                         type="radio"
-                                        value="female"
+                                        value="Female"
                                         className="radio checked:bg-blue-700 border-[.5px] border-black w-5 h-5"
                                         {...register("gender", { required: true })}
                                         required
@@ -109,7 +109,7 @@ const SignUp = () => {
                                 <label className='flex items-center'>
                                     <input
                                         type="radio"
-                                        value="other"
+                                        value="Other"
                                         className="radio checked:bg-blue-700 border-[.5px] border-black w-5 h-5"
                                         {...register("gender", { required: true })}
                                         required
