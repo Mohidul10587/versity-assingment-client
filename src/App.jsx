@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -19,8 +19,11 @@ import { BsMessenger } from 'react-icons/bs';
 
 function App() {
 
+const [display , setDisplay] = useState(true)
+
+ 
   return (
-   
+
     <div className='relative'>
       <Navbar />
       <Routes>
@@ -28,17 +31,20 @@ function App() {
         <Route path='/login' element={<Login />} />
         <Route path='/signUp' element={<SignUp />} />
         <Route path='/resetPassword' element={<ResetPassword />} />
-  
-        <Route path='dashboard' element={<RequireAuth><Dashboard /> </RequireAuth>}>
-              <Route index='profile' element={<Profile></Profile>}></Route>
-              <Route path='allUser' element={<AllUser />}></Route>
-              <Route path='review' element={<MyReview />}></Route>
 
-            </Route>
+        <Route path='dashboard' element={<RequireAuth><Dashboard /> </RequireAuth>}>
+          <Route index='profile' element={<Profile></Profile>}></Route>
+          <Route path='allUser' element={<AllUser />}></Route>
+          <Route path='review' element={<MyReview />}></Route>
+
+        </Route>
       </Routes>
       <Footer />
 
-      <a href="https://www.facebook.com/messages/t/100064805559031" target='_blank_'> <p className='fixed z-50 md:bottom-10 md:right-10 right-2 bottom-2 text-3xl '> <BsMessenger className='bg-white p-1 md:w-16 md:h-16 text-blue-900 rounded-full'  /></p></a>
+      <div className={display? `fixed z-50 md:bottom-10 md:right-10 right-2 bottom-2 cursor-pointer `:`hidden`}>
+        <p className='ml-10' onClick={()=>setDisplay(false)}>x</p>
+        <a href="https://www.facebook.com/messages/t/100064805559031" target='_blank_'> <p className='text-3xl '><BsMessenger className='bg-white p-1 md:w-16 md:h-16 text-blue-700 rounded-full' /> </p></a>
+      </div>
     </div>
   )
 }
