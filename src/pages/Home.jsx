@@ -22,7 +22,6 @@ const Home = () => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data)
                 setReviews(data)
                 setIsLoading(false)
             })
@@ -187,7 +186,7 @@ const Home = () => {
                 {isLoading ? <p className='text-center text-2xl mt-10'>Loading...</p> : <div className='grid md:grid-cols-2 grid-cols-1 gap-4 mt-16'>
                     {reviews.slice(-4).map((r, index) => <div key={r._id} className='md:flex items-center p-2 border border-blue-600 mt-2 rounded-lg md:h-44 shadow-lg shadow-blue-500'>
                         <div className='md:w-2/12 w-full mr-4 '>
-                            <img src="https://png.pngtree.com/png-vector/20190710/ourmid/pngtree-user-vector-avatar-png-image_1541962.jpg" className='h-12 w-12 rounded-full border-blue-600 border-2' alt="" srcset="" />
+                            <img src="https://png.pngtree.com/png-vector/20190710/ourmid/pngtree-user-vector-avatar-png-image_1541962.jpg" className='h-12 w-12 rounded-full border-blue-600 border-2' alt="" srcSet="" />
                         </div>
                         <div className='md:w-10/12 pr-4'>
                             <div className='flex justify-between'>

@@ -28,7 +28,7 @@ const Login = () => {
 
     let firebaseError;
 
-    if (loading ) {
+    if (loading) {
 
         return <div className='flex justify-center items-center h-screen text-2xl'> <p>Loading...</p>
         </div>
@@ -39,7 +39,7 @@ const Login = () => {
     }
 
     const onSubmit = data => {
-
+        // the input values are provided by user is send to firebase via signInWithEmailAndPassword function 
         signInWithEmailAndPassword(data.email, data.password)
 
     }
@@ -49,15 +49,11 @@ const Login = () => {
                 <div className="card-body">
                     <h2 className="text-center text-xl font-bold">Log In</h2>
                     <form onSubmit={handleSubmit(onSubmit)}>
-
-
                         <div className="form-control w-full max-w-xs">
                             <label className="label">
                                 <span className="label-text">Email</span>
-
                             </label>
                             <input
-
                                 type="email"
                                 placeholder="Email"
                                 className="input input-bordered border-black w-full max-w-xs"
@@ -115,22 +111,14 @@ const Login = () => {
                         <button
                             type="submit"
                             className="btn btn-outline w-full hover:bg-blue-700">Submit</button>
-
-
                     </form>
 
 
                     <div className='flex justify-between text-xs text-blue-500 font-bold'>
-                        <Link  to='/signUp'>Create new account</Link> 
-                        <Link  to='/resetPassword'>Forgot password ?</Link> 
-                   
+                        <Link to='/signUp'>Create new account</Link>
+                        <Link to='/resetPassword'>Forgot password ?</Link>
+
                     </div>
-
-                
-
-                  
-
-
                 </div>
             </div>
         </div>

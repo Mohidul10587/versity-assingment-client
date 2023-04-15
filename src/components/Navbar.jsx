@@ -15,9 +15,18 @@ import auth from "../firebase.init";
 
 
 const Navbar = () => {
+
+
+  // useState is a react createHook. It give initial value of a variable .
+  //  The set..... function change the initial value and set a new value .
+
   const [drawer, setDrawer] = useState(false)
   const [toggleCross, setToggleCross] = useState(false)
+
+  // User information is comes from firebase database via useAuthState function
   const [user] = useAuthState(auth)
+
+  // useNavigate function is used for navigate a targeted page . this hook is use for conditional navigate situation 
   const navigate = useNavigate()
   const signedOut = () => {
     signOut(auth);
@@ -49,7 +58,7 @@ const Navbar = () => {
 
 
         {/* menu for mobile device  start here*/}
-        {/* setToggleCross function change the value of toggleCross . the VscThreeBars bars icon will be hidden when the value of  toggleCross is true . And the setDrawer function change the value of drawer .The drawer will be displayed when the drawer value will be false*/}
+        {/* setToggleCross function change the value of toggleCross . the VscThreeBars bars icon will be hidden and the cross will be displayed when the value of  toggleCross is true . And the setDrawer function change the value of drawer .The drawer will be displayed when the drawer value will be true and will be hidden when the value of drawer will be false*/}
         <VscThreeBars className={toggleCross ? "hidden bg-white text-black rounded-full p-1  text-3xl" : "md:hidden  bg-white text-black rounded-full p-1  text-3xl"}
           onClick={() => {
             setDrawer(true)
@@ -67,7 +76,9 @@ const Navbar = () => {
         <div onClick={() => {
           setDrawer(false)
           setToggleCross(false)
-        }} className={drawer ?'md:hidden fixed top-12 w-64 left-0 transition-all duration-700 rounded-b bg-blue-600': 'rounded-b  bg-blue-600 md:hidden fixed  top-12 w-64   z-30 -left-64 transition-all duration-700' } >
+
+          // if the drawer value is true the first section of ternary operation will be executed otherwise the second section will be executed
+        }} className={drawer ? 'md:hidden fixed top-12 w-64 left-0 transition-all duration-700 rounded-b bg-blue-600' : 'rounded-b  bg-blue-600 md:hidden fixed  top-12 w-64   z-30 -left-64 transition-all duration-700'} >
 
           <a href='/#Home'>  <p className=" border-2 border-white hover:font-bold px-2 py-2 mx-2 bg-white rounded my-3 ">Home</p></a>
           <a href="/#scenario">  <p className=" border-2 border-white hover:font-bold px-2 py-2 mx-2 bg-white rounded my-3 ">Scenario</p></a>
@@ -76,6 +87,7 @@ const Navbar = () => {
 
           <a href="/#Contact">  <p className=" border-2 border-white hover:font-bold px-2 py-2 mx-2 bg-white rounded my-3 ">Contact</p></a>
           {user ? <div>
+            {/* if anybody press of the SignOut paragraph the signOut function will be called */}
             <p className=" border-2 border-white hover:font-bold px-2 py-2 mx-2 bg-white rounded my-3 " onClick={() => signedOut()}>SignOut</p>
             <Link to='/dashboard'> <p className=" border-2 border-white hover:font-bold px-2 py-2 mx-2 bg-white rounded my-3 ">Dadhboard</p> </Link>
           </div> : <Link to='/login'><p className=" border-2 border-white hover:font-bold px-2 py-2 mx-2 bg-white rounded my-3 ">Login</p></Link>}

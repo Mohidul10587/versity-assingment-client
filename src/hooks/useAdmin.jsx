@@ -1,3 +1,9 @@
+
+
+// Buy this hooks the user is cheking  that the user is an admin or not 
+
+
+
 import { useState, useEffect } from 'react';
 import url from '../components/url';
 
@@ -13,7 +19,7 @@ const useAdmin = (user) => {
                 method: 'GET',
                 headers: {
                     'content-type': 'application/json',
-                    authorization: `Bearer ${localStorage.getItem('accessToken')}`
+                  
                 }
             })
                 .then(res => res.json())
