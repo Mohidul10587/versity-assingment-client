@@ -32,7 +32,7 @@ const Dashboard = () => {
           <li className='mb-2 bg-white rounded-md'> <Link to='/dashboard'>Profile</Link></li>
 
           <li className='mb-2 bg-white rounded-md'> <Link to='/dashboard/review'>Give Review</Link></li>
-
+{/* the admin varriable return the useAdmin hook . If admin true the this list item will be displayed */}
           {admin && <li className='mb-2 bg-white rounded-md'> <Link to='/dashboard/allUser'>All Users</Link></li>}
         </ul>
 

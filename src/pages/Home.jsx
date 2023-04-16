@@ -31,12 +31,20 @@ const Home = () => {
     const icon = <p className='text-orange-500'><AiFillStar /></p>
     return (
         <div className=''>
+
+            {/* banner div start here  */}
             <div id='Home' className='md:pt-10 pt-10'>
+                {/* this image is for desktop */}
                 <img className=' h-screen w-full md:block hidden' src={img} alt="" />
+                {/* this image is for mobile device */}
                 <img className=' h-screen w-full block md:hidden' src={img2} alt="" />
             </div>
+
+            {/* scenario div start here  */}
+
             <div id='scenario' className='pt-24 md:px-10 px-4'>
                 <h1 className='text-3xl font-bold mb-4 text-center'>THE MOST HEART TOUCHING SITE IN BANGLADESH</h1>
+                {/* Cox Bazar */}
                 <div className=' w-full  md:flex justify-between mt-10 border-[1px] border-blue-600 rounded-lg overflow-hidden md:h-[410px] group group'>
                     <div className='md:w-1/2 overflow-hidden'>
                         <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/10/e2/f8/43/longest-sea-beach-in.jpg?w=700&h=-1&s=1" className='h-full transition ease-in-out duration-1000 group-hover:scale-125' alt="" />
@@ -50,7 +58,7 @@ const Home = () => {
                     </div>
                 </div>
 
-
+                {/* Lawachara forest */}
                 <div className='w-full md:flex justify-between mt-10 border-[1px] border-blue-600 rounded-lg overflow-hidden md:h-[410px] group'>
                     <div className='md:w-1/2 overflow-hidden'>
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbQyQNZRk6G64rRIWzV4YusXMCcVC4KmW3TQ&usqp=CAU" className='w-full h-full transition ease-in-out duration-1000 group-hover:scale-125' alt="" />
@@ -66,8 +74,8 @@ const Home = () => {
                     </div>
 
                 </div>
-                {/* third  img*/}
 
+                {/*Kuakata Sea Beach*/}
                 <div className=' w-full  md:flex justify-between mt-10 border-[1px] border-blue-600 rounded-lg overflow-hidden md:h-[410px] group'>
                     <div className='md:w-1/2 overflow-hidden'>
                         <img className='h-full w-full transition ease-in-out duration-1000 group-hover:scale-125' src="https://upload.wikimedia.org/wikipedia/commons/3/37/Kuakata_beach.jpg" alt="" />
@@ -80,8 +88,7 @@ const Home = () => {
                     </div>
                 </div>
 
-                {/* fourth */}
-
+                {/* Mangrove Forest(Sundarbon) */}
                 <div className=' w-full  md:flex justify-between mt-10 border-[1px] border-blue-600 rounded-lg overflow-hidden md:h-[410px] group'>
                     <div className='md:w-1/2 overflow-hidden'>
                         <img className='w-full h-full transition ease-in-out duration-1000 group-hover:scale-125' src="https://i.natgeofe.com/n/a50f7239-ff6d-4874-9448-25d94d8d1c80/sundarbans-bangladesh_16x9.jpg?w=1200" alt="" />
@@ -97,8 +104,8 @@ const Home = () => {
                     </div>
 
                 </div>
-                {/* fifth */}
 
+                {/* St. Martin's Island */}
                 <div className=' w-full  md:flex justify-between mt-10 border-[1px] border-blue-600 rounded-lg overflow-hidden md:h-[410px] group'>
                     <div className='md:w-1/2 overflow-hidden'>
                         <img className='w-full h-full transition ease-in-out duration-1000 group-hover:scale-125' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTI-bJD0Mri8Gw75ZYO4LscuvBSMen7c_mMMg&usqp=CAU" alt="" />
@@ -113,8 +120,9 @@ const Home = () => {
                 </div>
             </div>
 
-            {/* About Us */}
 
+
+            {/* About Us div start from here */}
             <div id='AboutUs' className='pt-24 md:px-10 px-2 flex justify-center text-justify'>
                 <div className=''>
 
@@ -122,13 +130,13 @@ const Home = () => {
                     <div className='mt-4'>
                         <p className='text-xl font-bold'>At our travel agency, we strive to provide the best possible experience for all of our customers. Whether you're planning a weekend getaway or a trip around the world, we have the expertise and resources to help make your travel dreams a reality.</p>
                         <p className='text-xl font-bold'>Here are just a few of the services we offer:</p>
-                       
-                         <div className='md:flex justify-center'>
-                         <div className='border border-blue-600 p-4 rounded-xl m-4 shadow-lg shadow-blue-600 md:w-3/12 md:h-96'>
-                            <div className='flex justify-center'>
-                                <img className='w-20 h-20 p-2 border border-black rounded-full' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5EVXelHoBjUs4hooBApP9o9lF5THHP5Gfm9K1q5T_wNhRnvR0EQ8lZH_i69qX3oanM-0&usqp=CAU" alt="" />
-                            </div>
-                            <p className='text-center font-bold mb-2 text-lg'> Customized travel packages:</p>
+
+                        <div className='md:flex justify-center'>
+                            <div className='border border-blue-600 p-4 rounded-xl m-4 shadow-lg shadow-blue-600 md:w-3/12 md:h-96'>
+                                <div className='flex justify-center'>
+                                    <img className='w-20 h-20 p-2 border border-black rounded-full' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5EVXelHoBjUs4hooBApP9o9lF5THHP5Gfm9K1q5T_wNhRnvR0EQ8lZH_i69qX3oanM-0&usqp=CAU" alt="" />
+                                </div>
+                                <p className='text-center font-bold mb-2 text-lg'> Customized travel packages:</p>
                                 <p>We understand that each traveler is unique, which is why we offer customized travel packages tailored to your specific needs and preferences. From luxurious accommodations to adventurous excursions, we can create a personalized itinerary that suits your interests and budget.</p>
                             </div>
 
@@ -136,7 +144,7 @@ const Home = () => {
                                 <div className='flex justify-center'>
                                     <img className='w-20 h-20 p-2 border border-black rounded-full' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9StHkEyk7z-7Sh4DONrPzNdgLh4lJXOvB-w&usqp=CAU" alt="" />
                                 </div>
-                            <p className='text-center font-bold mb-2 text-lg'> Flights and transportation:</p>
+                                <p className='text-center font-bold mb-2 text-lg'> Flights and transportation:</p>
                                 <p> We can help you find the best deals on flights and transportation, whether you're traveling domestically or internationally. Our experienced team can help you navigate the complex world of airline and transportation logistics, ensuring a smooth and stress-free travel experience.</p>
                             </div>
 
@@ -145,16 +153,16 @@ const Home = () => {
                                 <div className='flex justify-center'>
                                     <img className='w-20 h-20 p-2 border border-black rounded-full' src="https://w7.pngwing.com/pngs/756/905/png-transparent-nokras-riverine-hotel-spa-accommodation-motel-computer-icons-hotel-text-rectangle-room.png" alt="" />
                                 </div>
-                            <p className='text-center font-bold mb-2 text-lg'> Accommodations:</p>
+                                <p className='text-center font-bold mb-2 text-lg'> Accommodations:</p>
                                 <p>We partner with some of the best hotels and resorts around the world to provide our customers with a wide range of accommodation options. From budget-friendly hostels to luxurious five-star hotels, we can help you find the perfect place to stay for your trip.</p>
                             </div>
-                         </div>
+                        </div>
 
-                   <div className='md:flex justify-center'>
-                   <div className='border border-blue-600 p-4 rounded-xl m-4 shadow-lg shadow-blue-600 md:w-3/12 md:h-96'>
-                    <div className='flex justify-center'>
-                        <img className='w-20 h-20 p-2 border border-black rounded-full' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKSMI_wWOjcK_hDlSLgwTjz7eg7UCUkhDl0xatc9E6XWuuX8CKitW8C1_nrhkt8ewNkyM&usqp=CAU" alt="" />
-                    </div>
+                        <div className='md:flex justify-center'>
+                            <div className='border border-blue-600 p-4 rounded-xl m-4 shadow-lg shadow-blue-600 md:w-3/12 md:h-96'>
+                                <div className='flex justify-center'>
+                                    <img className='w-20 h-20 p-2 border border-black rounded-full' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKSMI_wWOjcK_hDlSLgwTjz7eg7UCUkhDl0xatc9E6XWuuX8CKitW8C1_nrhkt8ewNkyM&usqp=CAU" alt="" />
+                                </div>
                                 <p className='text-center font-bold mb-2 text-lg'> Activities and excursions:</p>
                                 <p> Whether you're looking for a relaxing day at the beach or an adrenaline-fueled adventure, we can help you plan the perfect activities and excursions for your trip. From guided tours to cultural experiences, we have a wide range of options to choose from.</p>
                             </div>
@@ -162,12 +170,12 @@ const Home = () => {
                                 <div className='flex justify-center'>
                                     <img className='w-20 h-20 p-2 border border-black rounded-full' src="https://cdn.iconscout.com/icon/premium/png-256-thumb/travel-insurance-1409919-1193848.png" alt="" />
                                 </div>
-                            <p className='text-center font-bold mb-2 text-lg'> Travel insurance:</p>
+                                <p className='text-center font-bold mb-2 text-lg'> Travel insurance:</p>
                                 <p> We understand that unexpected events can happen while traveling, which is why we offer travel insurance to protect our customers in case of emergencies or unforeseen circumstances.</p>
                             </div>
-                   </div>
+                        </div>
 
-                       
+
 
                         <p>
                             At our travel agency, we are committed to providing exceptional service and creating unforgettable travel experiences for our customers. Contact us today to start planning your next adventure!
@@ -175,14 +183,14 @@ const Home = () => {
                     </div>
                 </div>
             </div>
+
+            {/* Contact div start from here  */}
             <div id='Contact' className='pt-24'>
                 <Contact />
             </div>
-
+            {/* review div start from here  */}
             <div id='review' className='md:px-16 px-4 pt-24'>
-
                 <h1 className='text-3xl font-bold mb-4 text-center'>TESTIMONIALS</h1>
-
                 {isLoading ? <p className='text-center text-2xl mt-10'>Loading...</p> : <div className='grid md:grid-cols-2 grid-cols-1 gap-4 mt-16'>
                     {reviews.slice(-4).map((r, index) => <div key={r._id} className='md:flex items-center p-2 border border-blue-600 mt-2 rounded-lg md:h-44 shadow-lg shadow-blue-500'>
                         <div className='md:w-2/12 w-full mr-4 '>
@@ -199,9 +207,6 @@ const Home = () => {
                                     {r.ratings == 5 && <div className='flex'>{icon}{icon}{icon}{icon}{icon}</div>}
                                 </div>
                             </div>
-
-
-
                             <p className='text-justify'>{r.review.slice(0, 100)}{r.review.length > 101 && '.....'}</p>
                             {r.review.length > 101 && <div>
                                 <p className='mt-2'>

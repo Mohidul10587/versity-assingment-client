@@ -8,6 +8,8 @@ const AllUser = () => {
   const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
+
+    // Coming data of all users from database 
     fetch(`${url}/allUsers`, {
       method: 'GET',
     })
@@ -26,6 +28,7 @@ const AllUser = () => {
 
 
       <div className="overflow-x-auto">
+        {/* this div is for medium to larger device */}
         <div className='hidden md:block'>
           <table className="table w-full">
 
@@ -48,7 +51,7 @@ const AllUser = () => {
           </table>
         </div>
 
-
+        {/* this div is for mobile device */}
         <div className='pr-2 md:hidden block'>
           <table className="table w-full">
 
