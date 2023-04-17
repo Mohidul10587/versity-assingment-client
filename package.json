@@ -1,4 +1,4 @@
-{"homepage": "https://Mohidul10587.github.io/versity-assingment-client",
+{
   "name": "my-project",
   "private": true,
   "version": "0.0.0",
@@ -6,8 +6,6 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
     "preview": "vite preview"
   },
   "dependencies": {
