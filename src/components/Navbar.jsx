@@ -1,15 +1,15 @@
 
 "use client"; // this is a client component
-import { signOut } from "firebase/auth";
+
 import { useState } from "react";
 import React, { useRef } from 'react';
-import { useAuthState } from "react-firebase-hooks/auth";
+
 import { RxCross2 } from 'react-icons/rx'
 import { VscThreeBars } from 'react-icons/vsc'
 import { FaDove } from 'react-icons/fa'
 
 import { Link, useNavigate } from "react-router-dom";
-import auth from "../firebase.init";
+
 
 
 
