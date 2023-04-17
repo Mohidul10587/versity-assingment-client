@@ -11,13 +11,18 @@ const Contact = () => {
   const form = useRef();
   const sendEmail = (e) => {
     e.preventDefault();
-    emailjs.sendForm('service_k01mvfs', 'template_z1n5dkt', form.current, 'jpahS1JZakvGMUb-U')
+    emailjs.sendForm('service_ignxss8', 'template_oppn18a', form.current, 'rgNL_JOF5aEs_LbaP')
       .then((result) => {
         alert("Your emai sent successfully to the website admin")
       }, (error) => {
         console.log(error.text);
       });
   };
+
+
+// service id  
+//          public key        tamplate email  
+
 
   return (
     <div>

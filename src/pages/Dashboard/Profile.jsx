@@ -11,6 +11,7 @@ const Profile = () => {
   const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
+    // fetching  Data of current user
     fetch(`${url}/currentUser/${currentUser.email}`, {
       method: 'GET',
       headers: {

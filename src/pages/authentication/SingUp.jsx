@@ -44,7 +44,8 @@ const SignUp = () => {
             .then(response => response.json())
             .then(data => console.log(data))
             .catch(error => console.error(error));
-            
+
+        // the input values are provided by user is send to firebase via createUserWithEmailAndPassword function to create a new user.
         await createUserWithEmailAndPassword(data.email, data.password)
         await updateProfile({ displayName: data.name });
     }
