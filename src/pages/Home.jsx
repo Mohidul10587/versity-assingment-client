@@ -148,7 +148,6 @@ const Home = () => {
                                 <p> We can help you find the best deals on flights and transportation, whether you're traveling domestically or internationally. Our experienced team can help you navigate the complex world of airline and transportation logistics, ensuring a smooth and stress-free travel experience.</p>
                             </div>
 
-
                             <div className='border border-blue-600 p-4 rounded-xl m-4 shadow-lg shadow-blue-600 md:w-3/12 md:h-96'>
                                 <div className='flex justify-center'>
                                     <img className='w-20 h-20 p-2 border border-black rounded-full' src="https://w7.pngwing.com/pngs/756/905/png-transparent-nokras-riverine-hotel-spa-accommodation-motel-computer-icons-hotel-text-rectangle-room.png" alt="" />
