@@ -68,7 +68,7 @@ const Contact = () => {
               <div className="md:ml-10">
                 <h1 className="text-2xl font-bold mb-2">Adress</h1>
 
-                <p>Shafipur,Kaliakoir,Gazipur</p>
+                <p>Shafipur,Kaliakoir,<br/> Gazipur</p>
               </div>
             </div>
           </div>
